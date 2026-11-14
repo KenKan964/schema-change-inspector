@@ -1,0 +1,49 @@
+{
+  "status": "NOT_RUN",
+  "public_release": "HOLD",
+  "reason": "Six environment execution remains pending after GitHub registration and independent confirmation.",
+  "jobs": [
+    {
+      "os": "ubuntu-latest",
+      "python": "3.11",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "job_id": null
+    },
+    {
+      "os": "ubuntu-latest",
+      "python": "3.12",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "job_id": null
+    },
+    {
+      "os": "ubuntu-latest",
+      "python": "3.13",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "job_id": null
+    },
+    {
+      "os": "windows-latest",
+      "python": "3.11",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "job_id": null
+    },
+    {
+      "os": "windows-latest",
+      "python": "3.12",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "job_id": null
+    },
+    {
+      "os": "windows-latest",
+      "python": "3.13",
+      "status": "NOT_RUN",
+      "run_id": null,
+      "job_id": null
+    }
+  ]
+}
