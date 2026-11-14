@@ -1,0 +1,258 @@
+[
+  {
+    "case": "NP-01",
+    "revision": "before",
+    "old_json_exact": "{\"enum\":[1.0000000000000001]}",
+    "new_json_exact": "{\"enum\":[1]}",
+    "exit_code": 0,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "compatibility": "L(old) subset L(new): input acceptance only",
+      "classification": "NON_BREAKING",
+      "findings": [
+        {
+          "pointer": "",
+          "old": {
+            "enum": [
+              1.0
+            ]
+          },
+          "new": {
+            "enum": [
+              1
+            ]
+          },
+          "rule_id": "SUBSET_SUFFICIENT_PROOF",
+          "counterexample": null,
+          "counterexample_available": false
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 0
+    }
+  },
+  {
+    "case": "NP-01",
+    "revision": "after",
+    "old_json_exact": "{\"enum\":[1.0000000000000001]}",
+    "new_json_exact": "{\"enum\":[1]}",
+    "exit_code": 2,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "classification": "UNKNOWN",
+      "findings": [
+        {
+          "pointer": "",
+          "rule_id": "UNSUPPORTED_NUMERIC_PRECISION",
+          "reason": "decimal not exactly representable in binary64; precision would be lost",
+          "old": null,
+          "new": null,
+          "counterexample": null,
+          "counterexample_available": false
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 2
+    }
+  },
+  {
+    "case": "NP-02",
+    "revision": "before",
+    "old_json_exact": "{\"enum\":[1.0000000000000001]}",
+    "new_json_exact": "{\"type\":\"integer\"}",
+    "exit_code": 0,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "compatibility": "L(old) subset L(new): input acceptance only",
+      "classification": "NON_BREAKING",
+      "findings": [
+        {
+          "pointer": "/enum",
+          "old_present": true,
+          "new_present": false,
+          "old": [
+            1.0
+          ],
+          "new": null,
+          "rule_id": "SUBSET_SUFFICIENT_PROOF",
+          "counterexample": null,
+          "counterexample_available": false,
+          "reason": "global schema decision; pointer identifies changed input fragment"
+        },
+        {
+          "pointer": "/type",
+          "old_present": false,
+          "new_present": true,
+          "old": null,
+          "new": "integer",
+          "rule_id": "SUBSET_SUFFICIENT_PROOF",
+          "counterexample": null,
+          "counterexample_available": false,
+          "reason": "global schema decision; pointer identifies changed input fragment"
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 0
+    }
+  },
+  {
+    "case": "NP-02",
+    "revision": "after",
+    "old_json_exact": "{\"enum\":[1.0000000000000001]}",
+    "new_json_exact": "{\"type\":\"integer\"}",
+    "exit_code": 2,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "classification": "UNKNOWN",
+      "findings": [
+        {
+          "pointer": "",
+          "rule_id": "UNSUPPORTED_NUMERIC_PRECISION",
+          "reason": "decimal not exactly representable in binary64; precision would be lost",
+          "old": null,
+          "new": null,
+          "counterexample": null,
+          "counterexample_available": false
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 2
+    }
+  },
+  {
+    "case": "NP-03",
+    "revision": "before",
+    "old_json_exact": "{\"enum\":[9007199254740993e0]}",
+    "new_json_exact": "{\"enum\":[9007199254740992]}",
+    "exit_code": 0,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "compatibility": "L(old) subset L(new): input acceptance only",
+      "classification": "NON_BREAKING",
+      "findings": [
+        {
+          "pointer": "",
+          "old": {
+            "enum": [
+              9007199254740992.0
+            ]
+          },
+          "new": {
+            "enum": [
+              9007199254740992
+            ]
+          },
+          "rule_id": "SUBSET_SUFFICIENT_PROOF",
+          "counterexample": null,
+          "counterexample_available": false
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 0
+    }
+  },
+  {
+    "case": "NP-03",
+    "revision": "after",
+    "old_json_exact": "{\"enum\":[9007199254740993e0]}",
+    "new_json_exact": "{\"enum\":[9007199254740992]}",
+    "exit_code": 2,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "classification": "UNKNOWN",
+      "findings": [
+        {
+          "pointer": "",
+          "rule_id": "UNSUPPORTED_NUMERIC_PRECISION",
+          "reason": "decimal not exactly representable in binary64; precision would be lost",
+          "old": null,
+          "new": null,
+          "counterexample": null,
+          "counterexample_available": false
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 2
+    }
+  },
+  {
+    "case": "NP-04",
+    "revision": "before",
+    "old_json_exact": "{\"enum\":[1e-400]}",
+    "new_json_exact": "{\"enum\":[0]}",
+    "exit_code": 0,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "compatibility": "L(old) subset L(new): input acceptance only",
+      "classification": "NON_BREAKING",
+      "findings": [
+        {
+          "pointer": "",
+          "old": {
+            "enum": [
+              0.0
+            ]
+          },
+          "new": {
+            "enum": [
+              0
+            ]
+          },
+          "rule_id": "SUBSET_SUFFICIENT_PROOF",
+          "counterexample": null,
+          "counterexample_available": false
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 0
+    }
+  },
+  {
+    "case": "NP-04",
+    "revision": "after",
+    "old_json_exact": "{\"enum\":[1e-400]}",
+    "new_json_exact": "{\"enum\":[0]}",
+    "exit_code": 2,
+    "report": {
+      "schema_version": "sci-report-v1",
+      "rule_version": "sci-rules-v1",
+      "classification": "UNKNOWN",
+      "findings": [
+        {
+          "pointer": "",
+          "rule_id": "UNSUPPORTED_NUMERIC_PRECISION",
+          "reason": "decimal not exactly representable in binary64; precision would be lost",
+          "old": null,
+          "new": null,
+          "counterexample": null,
+          "counterexample_available": false
+        }
+      ],
+      "counterexample": null,
+      "counterexample_available": false,
+      "unknown_policy": "fail",
+      "exit_code": 2
+    }
+  }
+]
